@@ -13,7 +13,6 @@ function GetInvoices() {
       return response.json();
     })
     .then((data) => {
-      console.log(data);
       return data;
     })
     .catch((error) => {
@@ -40,13 +39,13 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        {loading ? (
+      <body className="App-body">
+      {loading ? (
           <p>Loading...</p>
         ) : (
           <InvoiceSelectList invoices={invoices} />
         )}
-      </header>
+      </body>
     </div>
   );
 }
