@@ -65,7 +65,7 @@ function InvoiceSelectList({ invoices }) {
         </div>
       )}
 
-      {showModal && <Modal handleAssign={handleAssign} />}
+      {showModal && <Modal handleAssign={handleAssign} selectedInvoice={selectedInvoice} selectedCreditNote={selectedCreditNote} />}
 
     </div>
   );

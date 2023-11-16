@@ -21,7 +21,7 @@ function InvoiceTable({ receivedInvoices, selectedInvoice, handleInvoiceSelectio
                             {invoice.id} ({invoice.organization_id})
                         </div>
                         <div className="flex-none w-1/3 px-6 py-4">${invoice.amount} {invoice.currency}</div>
-                        <div className="flex-none w-1/4 px-6 py-4">{invoice.type}</div>
+                        <div className="flex-none w-1/4 px-6 py-4"> Recibida </div>
                     </div>
                 ))}
             </div>
