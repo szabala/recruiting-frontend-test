@@ -38,15 +38,13 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <body className="App-body">
+      <div className="App">
       {loading ? (
           <p>Loading...</p>
         ) : (
           <InvoiceSelectList invoices={invoices} />
         )}
-      </body>
-    </div>
+      </div>
   );
 }
 
