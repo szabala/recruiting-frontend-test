@@ -3,7 +3,7 @@ import InvoiceTable from './InvoiceTable';
 import CreditNoteTable from './CreditNoteTable';
 import Modal from './Modal';
 
-function InvoiceComponent({ invoices }) {
+function InvoiceSelectList({ invoices }) {
   const receivedInvoices = invoices.filter((invoice) => invoice.type === 'received');
   const creditNoteInvoices = invoices.filter((invoice) => invoice.type === 'credit_note');
 
@@ -47,7 +47,7 @@ function InvoiceComponent({ invoices }) {
   }
 
   return (
-    <div className="w-100">
+    <div className="w-3/4">
       <InvoiceTable receivedInvoices={receivedInvoices} selectedInvoice={selectedInvoice} handleInvoiceSelection={handleInvoiceSelection} />
 
       {selectedInvoice && filteredCreditNoteInvoices.length !== 0 && (
@@ -71,4 +71,4 @@ function InvoiceComponent({ invoices }) {
   );
 }
 
-export default InvoiceComponent;
+export default InvoiceSelectList;
